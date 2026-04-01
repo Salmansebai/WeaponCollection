@@ -7,7 +7,7 @@
     "Era": "Cold War",
     "Country": "Russia",
     "Description": "Fusil d'assaut soviétique légendaire, conçu en 1947. Réputé pour sa fiabilité extrême dans toutes les conditions.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/AK-47_type_II_Part_DM-ST-89-01131.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/AK-47_type_II_Part_DM-ST-89-01131.jpg/320px-AK-47_type_II_Part_DM-ST-89-01131.jpg"
   },
   {
     "Name": "Battle Axe",
@@ -17,7 +17,7 @@
     "Era": "Medieval",
     "Country": "Europe",
     "Description": "Hache de guerre médiévale utilisée par les Vikings et chevaliers. Arme lourde et dévastatrice.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Francisca.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Bradypterus_axe.jpg/320px-Bradypterus_axe.jpg"
   },
   {
     "Name": "Sword",
@@ -27,7 +27,7 @@
     "Era": "Ancient",
     "Country": "Europe",
     "Description": "Épée longue à double tranchant, symbole de noblesse et de combat.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Longsword_european.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Sword_from_Jutland.jpg/320px-Sword_from_Jutland.jpg"
   },
   {
     "Name": "M16",
@@ -37,7 +37,7 @@
     "Era": "Modern",
     "Country": "USA",
     "Description": "Fusil d'assaut américain standard depuis la guerre du Vietnam.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/M16A1_brimob.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/M16A1_brimob.jpg/320px-M16A1_brimob.jpg"
   },
   {
     "Name": "Katana",
@@ -47,7 +47,7 @@
     "Era": "Feudal Japan",
     "Country": "Japan",
     "Description": "Sabre japonais emblématique des samouraïs. Lame incurvée d'une précision redoutable.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Katana-p1000628.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Katana-p1000628.jpg/320px-Katana-p1000628.jpg"
   },
   {
     "Name": "Desert Eagle",
@@ -57,7 +57,7 @@
     "Era": "Modern",
     "Country": "USA",
     "Description": "Pistolet semi-automatique très puissant. Connu pour sa taille imposante et son calibre .50 AE.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Desert_Eagle_50_AE.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Desert_Eagle_50_AE.jpg/320px-Desert_Eagle_50_AE.jpg"
   },
   {
     "Name": "Longbow",
@@ -67,7 +67,7 @@
     "Era": "Medieval",
     "Country": "England",
     "Description": "Arc long anglais utilisé lors de la Guerre de Cent Ans. Portée exceptionnelle.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Longbow_at_the_Mary_Rose_museum.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Archery_-_Flickr_-_tonrulkens.jpg/320px-Archery_-_Flickr_-_tonrulkens.jpg"
   },
   {
     "Name": "RPG-7",
@@ -77,7 +77,7 @@
     "Era": "Cold War",
     "Country": "Russia",
     "Description": "Lance-roquettes antichar soviétique très répandu.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/RPG-7_detached.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/RPG-7_detached.jpg/320px-RPG-7_detached.jpg"
   },
   {
     "Name": "Glock 17",
@@ -87,7 +87,7 @@
     "Era": "Modern",
     "Country": "Austria",
     "Description": "Pistolet semi-automatique léger et fiable. Très utilisé par les forces de l'ordre.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/4/forty/Glock_17.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Glock_17_Bundeswehr.jpg/320px-Glock_17_Bundeswehr.jpg"
   },
   {
     "Name": "Crossbow",
@@ -97,7 +97,7 @@
     "Era": "Medieval",
     "Country": "Europe",
     "Description": "Arbalète médiévale puissante. Capable de percer les armures les plus résistantes.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Crossbow_from_china.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Crossbow_from_china.jpg/320px-Crossbow_from_china.jpg"
   },
   {
     "Name": "Spear",
@@ -107,7 +107,7 @@
     "Era": "Ancient",
     "Country": "Greece",
     "Description": "Lance grecque utilisée par les hoplites. Arme d'infanterie par excellence.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Spear_head_-_geograph.org.uk_-_1008073.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Spear_head_-_geograph.org.uk_-_1008073.jpg/320px-Spear_head_-_geograph.org.uk_-_1008073.jpg"
   },
   {
     "Name": "Sniper AWP",
@@ -117,7 +117,7 @@
     "Era": "Modern",
     "Country": "UK",
     "Description": "Fusil de précision britannique redoutable. Capable d'éliminer une cible à plus d'un kilomètre.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/AWM_sniper_rifle.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/AWM_sniper_rifle.jpg/320px-AWM_sniper_rifle.jpg"
   },
   {
     "Name": "Flail",
@@ -127,7 +127,7 @@
     "Era": "Medieval",
     "Country": "Europe",
     "Description": "Fléau d'armes médiéval composé d'une boule cloutée. Difficile à parer.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Flail_(weapon).jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flail_%28weapon%29.jpg/320px-Flail_%28weapon%29.jpg"
   },
   {
     "Name": "MP5",
@@ -137,7 +137,7 @@
     "Era": "Modern",
     "Country": "Germany",
     "Description": "Pistolet-mitrailleur allemand très populaire. Utilisé par les forces spéciales.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/4/forty/MP5A3.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/MP5A3.jpg/320px-MP5A3.jpg"
   },
   {
     "Name": "Gladius",
@@ -147,6 +147,6 @@
     "Era": "Ancient",
     "Country": "Rome",
     "Description": "Épée courte des légionnaires romains. Parfaite pour le combat rapproché.",
-    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Gladius_Pompeii_type.jpg"
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Gladius_Pompei_type.jpg/320px-Gladius_Pompei_type.jpg"
   }
 ]
