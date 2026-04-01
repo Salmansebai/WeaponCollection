@@ -1,152 +1,152 @@
 [
   {
-    "Id": "",
     "Name": "AK-47",
     "Type": "Assault Rifle",
     "Damage": 80,
     "Weight": 4.0,
     "Era": "Cold War",
     "Country": "Russia",
-    "Description": "Fusil d'assaut soviétique légendaire, conçu en 1947. Réputé pour sa fiabilité extrême dans toutes les conditions. Arme lourde à cadence de tir élevée."
+    "Description": "Fusil d'assaut soviétique légendaire, conçu en 1947. Réputé pour sa fiabilité extrême dans toutes les conditions.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/AK-47_type_II_Part_DM-ST-89-01131.jpg"
   },
   {
-    "Id": "",
     "Name": "Battle Axe",
     "Type": "Axe",
     "Damage": 60,
     "Weight": 7.0,
     "Era": "Medieval",
     "Country": "Europe",
-    "Description": "Hache de guerre médiévale utilisée par les Vikings et chevaliers. Arme lourde et dévastatrice, nécessite une grande force physique."
+    "Description": "Hache de guerre médiévale utilisée par les Vikings et chevaliers. Arme lourde et dévastatrice.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Francisca.jpg"
   },
   {
-    "Id": "",
     "Name": "Sword",
     "Type": "Melee",
     "Damage": 50,
     "Weight": 3.0,
     "Era": "Ancient",
     "Country": "Europe",
-    "Description": "Épée longue à double tranchant, symbole de noblesse et de combat. Arme légère et précise, parfaite pour les duels."
+    "Description": "Épée longue à double tranchant, symbole de noblesse et de combat.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Longsword_european.jpg"
   },
   {
-    "Id": "",
     "Name": "M16",
     "Type": "Assault Rifle",
     "Damage": 100,
     "Weight": 6.0,
     "Era": "Modern",
     "Country": "USA",
-    "Description": "Fusil d'assaut américain standard depuis la guerre du Vietnam. Très précis à longue distance, cadence de tir rapide."
+    "Description": "Fusil d'assaut américain standard depuis la guerre du Vietnam.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/M16A1_brimob.jpg"
   },
   {
-    "Id": "",
     "Name": "Katana",
     "Type": "Melee",
     "Damage": 70,
     "Weight": 1.5,
     "Era": "Feudal Japan",
     "Country": "Japan",
-    "Description": "Sabre japonais emblématique des samouraïs. Lame incurvée d'une précision redoutable, forgée selon des techniques ancestrales."
+    "Description": "Sabre japonais emblématique des samouraïs. Lame incurvée d'une précision redoutable.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Katana-p1000628.jpg"
   },
   {
-    "Id": "",
     "Name": "Desert Eagle",
     "Type": "Pistol",
     "Damage": 75,
     "Weight": 2.0,
     "Era": "Modern",
     "Country": "USA",
-    "Description": "Pistolet semi-automatique très puissant. Connu pour sa taille imposante et son calibre .50 AE dévastateur."
+    "Description": "Pistolet semi-automatique très puissant. Connu pour sa taille imposante et son calibre .50 AE.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Desert_Eagle_50_AE.jpg"
   },
   {
-    "Id": "",
     "Name": "Longbow",
     "Type": "Bow",
     "Damage": 45,
     "Weight": 2.5,
     "Era": "Medieval",
     "Country": "England",
-    "Description": "Arc long anglais utilisé lors de la Guerre de Cent Ans. Portée exceptionnelle pouvant atteindre 300 mètres."
+    "Description": "Arc long anglais utilisé lors de la Guerre de Cent Ans. Portée exceptionnelle.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Longbow_at_the_Mary_Rose_museum.jpg"
   },
   {
-    "Id": "",
     "Name": "RPG-7",
     "Type": "Rocket Launcher",
     "Damage": 200,
     "Weight": 7.0,
     "Era": "Cold War",
     "Country": "Russia",
-    "Description": "Lance-roquettes antichar soviétique très répandu. Capable de détruire des véhicules blindés légers."
+    "Description": "Lance-roquettes antichar soviétique très répandu.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/0/08/RPG-7_detached.jpg"
   },
   {
-    "Id": "",
     "Name": "Glock 17",
     "Type": "Pistol",
     "Damage": 55,
     "Weight": 0.7,
     "Era": "Modern",
     "Country": "Austria",
-    "Description": "Pistolet semi-automatique léger et fiable. L'un des pistolets les plus utilisés par les forces de l'ordre dans le monde."
+    "Description": "Pistolet semi-automatique léger et fiable. Très utilisé par les forces de l'ordre.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/4/forty/Glock_17.jpg"
   },
   {
-    "Id": "",
     "Name": "Crossbow",
     "Type": "Bow",
     "Damage": 65,
     "Weight": 3.5,
     "Era": "Medieval",
     "Country": "Europe",
-    "Description": "Arbalète médiévale puissante. Plus lente qu'un arc mais capable de percer les armures les plus résistantes."
+    "Description": "Arbalète médiévale puissante. Capable de percer les armures les plus résistantes.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Crossbow_from_china.jpg"
   },
   {
-    "Id": "",
     "Name": "Spear",
     "Type": "Melee",
     "Damage": 55,
     "Weight": 2.0,
     "Era": "Ancient",
     "Country": "Greece",
-    "Description": "Lance grecque utilisée par les hoplites. Arme d'infanterie par excellence, idéale en formation de phalanx."
+    "Description": "Lance grecque utilisée par les hoplites. Arme d'infanterie par excellence.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Spear_head_-_geograph.org.uk_-_1008073.jpg"
   },
   {
-    "Id": "",
     "Name": "Sniper AWP",
     "Type": "Sniper Rifle",
     "Damage": 150,
     "Weight": 6.5,
     "Era": "Modern",
     "Country": "UK",
-    "Description": "Fusil de précision britannique redoutable. Capable d'éliminer une cible à plus d'un kilomètre de distance."
+    "Description": "Fusil de précision britannique redoutable. Capable d'éliminer une cible à plus d'un kilomètre.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/AWM_sniper_rifle.jpg"
   },
   {
-    "Id": "",
     "Name": "Flail",
     "Type": "Melee",
     "Damage": 65,
     "Weight": 4.0,
     "Era": "Medieval",
     "Country": "Europe",
-    "Description": "Fléau d'armes médiéval composé d'une boule cloutée reliée à un manche. Difficile à parer grâce à son mouvement imprévisible."
+    "Description": "Fléau d'armes médiéval composé d'une boule cloutée. Difficile à parer.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Flail_(weapon).jpg"
   },
   {
-    "Id": "",
     "Name": "MP5",
     "Type": "Submachine Gun",
     "Damage": 60,
     "Weight": 2.5,
     "Era": "Modern",
     "Country": "Germany",
-    "Description": "Pistolet-mitrailleur allemand très populaire. Utilisé par les forces spéciales du monde entier grâce à sa compacité."
+    "Description": "Pistolet-mitrailleur allemand très populaire. Utilisé par les forces spéciales.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/4/forty/MP5A3.jpg"
   },
   {
-    "Id": "",
     "Name": "Gladius",
     "Type": "Melee",
     "Damage": 48,
     "Weight": 1.2,
     "Era": "Ancient",
     "Country": "Rome",
-    "Description": "Épée courte des légionnaires romains. Parfaite pour le combat rapproché en formation serrée."
+    "Description": "Épée courte des légionnaires romains. Parfaite pour le combat rapproché.",
+    "PictureUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Gladius_Pompeii_type.jpg"
   }
 ]
