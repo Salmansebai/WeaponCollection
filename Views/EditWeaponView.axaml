@@ -1,0 +1,256 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:WeaponCollection.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WeaponCollection.Views.EditWeaponView"
+             x:DataType="vm:EditWeaponViewModel">
+
+    <Grid Background="#0f0f0f" RowDefinitions="Auto,Auto,*,Auto">
+
+        <!-- Bouton Back -->
+        <Border Grid.Row="0"
+                Background="#161616"
+                Padding="24,16"
+                BorderBrush="#2a2a2a"
+                BorderThickness="0,0,0,1">
+            <Button Command="{Binding BackCommand}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border Background="#1a1a1a"
+                                CornerRadius="8"
+                                Padding="14,8"
+                                BorderBrush="#2a2a2a"
+                                BorderThickness="1">
+                            <TextBlock Text="← Back" Foreground="#aaa" FontSize="13"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Border>
+
+        <!-- Titre -->
+        <StackPanel Grid.Row="1" Margin="24,20,24,10">
+            <TextBlock Text="Edit weapon" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <TextBlock Text="Modify the details of your weapon" FontSize="12" Foreground="#666"/>
+        </StackPanel>
+
+        <!-- Contenu en 2 colonnes -->
+        <Grid Grid.Row="2" Margin="24,0,24,0" ColumnDefinitions="*,*" VerticalAlignment="Top">
+
+            <!-- Colonne gauche : Photo -->
+            <StackPanel Grid.Column="0" Spacing="16" Margin="0,0,12,0">
+
+                <TextBlock Text="PHOTO" FontSize="10" Foreground="#555" LetterSpacing="2" Margin="0,0,0,6"/>
+                <Border Background="#1a1a1a" CornerRadius="12" BorderBrush="#2a2a2a" BorderThickness="1">
+                    <StackPanel Margin="16" Spacing="10">
+                        <Border Background="#111" CornerRadius="8" Height="160" ClipToBounds="True">
+                            <Grid>
+                                <TextBlock Text="No image selected"
+                                           Foreground="#444"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           IsVisible="{Binding !HasPreviewImage}"/>
+                                <Image Source="{Binding PreviewImage}"
+                                       Stretch="Uniform"
+                                       IsVisible="{Binding HasPreviewImage}"/>
+                            </Grid>
+                        </Border>
+
+                        <Grid ColumnDefinitions="*,Auto" IsVisible="{Binding HasPreviewImage}">
+                            <Button Grid.Column="0" Command="{Binding PickImageCommand}" Margin="0,0,6,0">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Border Background="#1e3a5f" CornerRadius="8" Padding="0,7"
+                                                BorderBrush="#2a5a8f" BorderThickness="1">
+                                            <TextBlock Text="🖼 Changer" Foreground="#3498db"
+                                                       FontWeight="Bold" FontSize="12"
+                                                       HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                            <Button Grid.Column="1" Command="{Binding RemoveImageCommand}">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Border Background="#3a1a1a" CornerRadius="8" Padding="10,7"
+                                                BorderBrush="#5a2a2a" BorderThickness="1">
+                                            <TextBlock Text="🗑" Foreground="#e74c3c"
+                                                       FontWeight="Bold" FontSize="12"
+                                                       HorizontalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+
+                        <Button Command="{Binding PickImageCommand}"
+                                HorizontalAlignment="Stretch"
+                                IsVisible="{Binding !HasPreviewImage}">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Border Background="#1e3a5f" CornerRadius="8" Padding="0,7"
+                                            BorderBrush="#2a5a8f" BorderThickness="1">
+                                        <TextBlock Text="🖼 Parcourir" Foreground="#3498db"
+                                                   FontWeight="Bold" FontSize="12"
+                                                   HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </StackPanel>
+                </Border>
+
+            </StackPanel>
+
+            <!-- Colonne droite : Informations -->
+            <StackPanel Grid.Column="1" Spacing="16" Margin="12,0,0,0">
+                <TextBlock Text="INFORMATIONS" FontSize="10" Foreground="#555" LetterSpacing="2" Margin="0,0,0,6"/>
+                <Border Background="#1a1a1a" CornerRadius="12" BorderBrush="#2a2a2a" BorderThickness="1">
+                    <StackPanel Margin="16" Spacing="12">
+
+                        <StackPanel Spacing="5">
+                            <TextBlock Text="Name" Foreground="#aaa" FontSize="12"/>
+                            <TextBox Text="{Binding Name}" Watermark="e.g. AK-47"
+                                     Background="#111" Foreground="White" CaretBrush="White"
+                                     BorderBrush="#333" CornerRadius="8">
+                                <TextBox.Styles>
+                                    <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+                                        <Setter Property="Background" Value="#111"/>
+                                    </Style>
+                                </TextBox.Styles>
+                            </TextBox>
+                        </StackPanel>
+
+                        <StackPanel Spacing="5">
+                            <TextBlock Text="Type" Foreground="#aaa" FontSize="12"/>
+                            <TextBox Text="{Binding Type}" Watermark="e.g. Assault Rifle"
+                                     Background="#111" Foreground="White" CaretBrush="White"
+                                     BorderBrush="#333" CornerRadius="8">
+                                <TextBox.Styles>
+                                    <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+                                        <Setter Property="Background" Value="#111"/>
+                                    </Style>
+                                </TextBox.Styles>
+                            </TextBox>
+                        </StackPanel>
+
+                        <Grid ColumnDefinitions="*,*">
+                            <StackPanel Grid.Column="0" Spacing="5" Margin="0,0,6,0">
+                                <TextBlock Text="Era" Foreground="#aaa" FontSize="12"/>
+                                <TextBox Text="{Binding Era}" Watermark="e.g. Medieval"
+                                         Background="#111" Foreground="White" CaretBrush="White"
+                                         BorderBrush="#333" CornerRadius="8">
+                                    <TextBox.Styles>
+                                        <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+                                            <Setter Property="Background" Value="#111"/>
+                                        </Style>
+                                    </TextBox.Styles>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Spacing="5">
+                                <TextBlock Text="Country" Foreground="#aaa" FontSize="12"/>
+                                <TextBox Text="{Binding Country}" Watermark="e.g. Russia"
+                                         Background="#111" Foreground="White" CaretBrush="White"
+                                         BorderBrush="#333" CornerRadius="8">
+                                    <TextBox.Styles>
+                                        <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+                                            <Setter Property="Background" Value="#111"/>
+                                        </Style>
+                                    </TextBox.Styles>
+                                </TextBox>
+                            </StackPanel>
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*,*,*">
+                            <StackPanel Grid.Column="0" Spacing="5" Margin="0,0,6,0">
+                                <TextBlock Text="Damage" Foreground="#aaa" FontSize="12"/>
+                                <TextBox Text="{Binding Damage}" Watermark="e.g. 80"
+                                         Background="#111" Foreground="White" CaretBrush="White"
+                                         BorderBrush="#333" CornerRadius="8">
+                                    <TextBox.Styles>
+                                        <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+                                            <Setter Property="Background" Value="#111"/>
+                                        </Style>
+                                    </TextBox.Styles>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Spacing="5" Margin="0,0,6,0">
+                                <TextBlock Text="Weight (kg)" Foreground="#aaa" FontSize="12"/>
+                                <TextBox Text="{Binding Weight}" Watermark="e.g. 4"
+                                         Background="#111" Foreground="White" CaretBrush="White"
+                                         BorderBrush="#333" CornerRadius="8">
+                                    <TextBox.Styles>
+                                        <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+                                            <Setter Property="Background" Value="#111"/>
+                                        </Style>
+                                    </TextBox.Styles>
+                                </TextBox>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Spacing="5">
+                                <TextBlock Text="Price (€)" Foreground="#aaa" FontSize="12"/>
+                                <TextBox Text="{Binding Price}" Watermark="e.g. 500"
+                                         Background="#111" Foreground="White" CaretBrush="White"
+                                         BorderBrush="#333" CornerRadius="8">
+                                    <TextBox.Styles>
+                                        <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+                                            <Setter Property="Background" Value="#111"/>
+                                        </Style>
+                                    </TextBox.Styles>
+                                </TextBox>
+                            </StackPanel>
+                        </Grid>
+
+                        <StackPanel Spacing="5">
+                            <TextBlock Text="Description" Foreground="#aaa" FontSize="12"/>
+                            <TextBox Text="{Binding Description}"
+                                     Watermark="Décrivez l'arme..."
+                                     Background="#111" Foreground="White" CaretBrush="White"
+                                     SelectionBrush="#c0392b" BorderBrush="#333" CornerRadius="8"
+                                     Height="80" TextWrapping="Wrap" AcceptsReturn="True">
+                                <TextBox.Styles>
+                                    <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+                                        <Setter Property="Background" Value="#111"/>
+                                    </Style>
+                                </TextBox.Styles>
+                            </TextBox>
+                        </StackPanel>
+
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+
+        <!-- Barre du bas : message + bouton Save -->
+        <Border Grid.Row="3" Background="#161616" Padding="24,14"
+                BorderBrush="#2a2a2a" BorderThickness="0,1,0,0" Margin="0,10,0,0">
+            <Grid ColumnDefinitions="*,Auto">
+
+                <!-- Message de succès -->
+                <TextBlock Grid.Column="0"
+                           Text="{Binding StatusMessage}"
+                           Foreground="#2ecc71"
+                           FontSize="14"
+                           VerticalAlignment="Center"
+                           IsVisible="{Binding HasStatus}"/>
+
+                <!-- Bouton Save -->
+                <Button Grid.Column="1"
+                        Command="{Binding SaveCommand}"
+                        HorizontalAlignment="Right">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border Background="#c0392b" CornerRadius="8" Padding="28,10">
+                                <TextBlock Text="💾 Save changes" Foreground="White"
+                                           FontWeight="Bold" FontSize="14"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</UserControl>

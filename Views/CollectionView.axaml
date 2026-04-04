@@ -1,0 +1,219 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:WeaponCollection.ViewModels"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WeaponCollection.Views.CollectionView"
+             x:DataType="vm:CollectionViewModel"
+             x:Name="Collection">
+    
+         
+    <Design.DataContext>
+        <vm:CollectionViewModel/>
+    </Design.DataContext>
+
+    <DockPanel Background="#0f0f0f">
+
+        <!-- TOOLBAR -->
+        <Border DockPanel.Dock="Top"
+                Background="#161616"
+                Padding="24,16"
+                BorderBrush="#2a2a2a"
+                BorderThickness="0,0,0,1">
+            <Grid ColumnDefinitions="Auto,*,Auto">
+
+                <!-- Bouton Back -->
+                <Button Grid.Column="0"
+                        Command="{Binding BackCommand}"
+                        VerticalAlignment="Center"
+                        Margin="0,0,16,0">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border Background="#1a1a1a"
+                                    CornerRadius="8"
+                                    Padding="14,8"
+                                    BorderBrush="#2a2a2a"
+                                    BorderThickness="1">
+                                <TextBlock Text="← Back"
+                                           Foreground="#aaa"
+                                           FontSize="13"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <!-- Titre -->
+                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                    <TextBlock Text="My Arsenal"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+                    <TextBlock Text="{Binding MyObservableWeapons.Count, StringFormat='{}{0} weapons in collection'}"
+                               FontSize="12"
+                               Foreground="#666"/>
+                </StackPanel>
+
+                <!-- Boutons Add + CSV -->
+                <StackPanel Grid.Column="2"
+                            Orientation="Horizontal"
+                            Spacing="10"
+                            VerticalAlignment="Center">
+
+                    <!-- Bouton CSV -->
+                    <Button Command="{Binding GoToCsvCommand}">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border Background="#1e3a5f"
+                                        CornerRadius="8"
+                                        Padding="16,10">
+                                    <StackPanel Orientation="Horizontal" Spacing="8">
+                                        <TextBlock Text="📄"
+                                                   FontSize="14"
+                                                   Foreground="#3498db"
+                                                   VerticalAlignment="Center"/>
+                                        <TextBlock Text="CSV"
+                                                   FontSize="14"
+                                                   FontWeight="SemiBold"
+                                                   Foreground="#3498db"
+                                                   VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <!-- Bouton Add -->
+                    <Button Command="{Binding GoToAddCommand}">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border Background="#c0392b"
+                                        CornerRadius="8"
+                                        Padding="16,10">
+                                    <StackPanel Orientation="Horizontal" Spacing="8">
+                                        <TextBlock Text="+"
+                                                   FontSize="18"
+                                                   FontWeight="Bold"
+                                                   Foreground="White"
+                                                   VerticalAlignment="Center"/>
+                                        <TextBlock Text="Add Weapon"
+                                                   FontSize="14"
+                                                   FontWeight="SemiBold"
+                                                   Foreground="White"
+                                                   VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+        <!-- LISTE -->
+        <ScrollViewer Padding="20"
+                      VerticalScrollBarVisibility="Visible"
+                      HorizontalScrollBarVisibility="Disabled">
+            <ItemsControl ItemsSource="{Binding MyObservableWeapons}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Width="270"
+                                Height="380"
+                                Margin="10"
+                                CornerRadius="14"
+                                Background="#1a1a1a"
+                                BorderBrush="#2a2a2a"
+                                BorderThickness="1">
+                            <Grid RowDefinitions="160,*">
+
+                                <!-- Image -->
+                                <Border Grid.Row="0"
+                                        CornerRadius="14,14,0,0"
+                                        Background="#111"
+                                        ClipToBounds="True">
+                                    <Image Source="{Binding Picture}"
+                                           Stretch="UniformToFill"/>
+                                </Border>
+
+                                <!-- Infos -->
+                                <StackPanel Grid.Row="1" Margin="16,12,16,16" Spacing="6">
+
+                                    <Border Background="#c0392b"
+                                            CornerRadius="4"
+                                            Padding="6,2"
+                                            HorizontalAlignment="Left">
+                                        <TextBlock Text="{Binding Type}"
+                                                   FontSize="10"
+                                                   FontWeight="Bold"
+                                                   Foreground="White"
+                                                   LetterSpacing="1"/>
+                                    </Border>
+
+                                    <TextBlock Text="{Binding Name}"
+                                               FontSize="17"
+                                               FontWeight="Bold"
+                                               Foreground="White"
+                                               Margin="0,4,0,0"/>
+
+                                    <Grid ColumnDefinitions="*,*" Margin="0,6,0,0">
+                                        <StackPanel Grid.Column="0">
+                                            <TextBlock Text="DAMAGE"
+                                                       FontSize="9"
+                                                       Foreground="#555"
+                                                       LetterSpacing="1"/>
+                                            <TextBlock Text="{Binding Damage}"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Foreground="#e74c3c"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="1">
+                                            <TextBlock Text="WEIGHT"
+                                                       FontSize="9"
+                                                       Foreground="#555"
+                                                       LetterSpacing="1"/>
+                                            <TextBlock Text="{Binding Weight, StringFormat='{}{0} kg'}"
+                                                       FontSize="16"
+                                                       FontWeight="Bold"
+                                                       Foreground="#3498db"/>
+                                        </StackPanel>
+                                    </Grid>
+
+                                    <Button Margin="0,10,0,0"
+                                            HorizontalAlignment="Stretch"
+                                            Command="{Binding DataContext.FromParentCommand, ElementName=Collection}"
+                                            CommandParameter="{Binding Id}">
+                                        <Button.Template>
+                                            <ControlTemplate>
+                                                <Border Background="#252525"
+                                                        CornerRadius="8"
+                                                        Padding="0,10"
+                                                        BorderBrush="#333"
+                                                        BorderThickness="1">
+                                                    <TextBlock Text="View Details →"
+                                                               FontSize="13"
+                                                               Foreground="#aaa"
+                                                               HorizontalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+    </DockPanel>
+
+</UserControl>
