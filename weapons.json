@@ -1,0 +1,152 @@
+[
+  {
+    "Name": "AK-47",
+    "Type": "Assault Rifle",
+    "Damage": 80,
+    "Weight": 4.0,
+    "Era": "Cold War",
+    "Country": "Russia",
+    "Description": "Fusil d'assaut soviétique légendaire, conçu en 1947. Réputé pour sa fiabilité extrême dans toutes les conditions.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/aka47.png"
+  },
+  {
+    "Name": "Battle Axe",
+    "Type": "Axe",
+    "Damage": 60,
+    "Weight": 7.0,
+    "Era": "Medieval",
+    "Country": "Europe",
+    "Description": "Hache de guerre médiévale utilisée par les Vikings et chevaliers. Arme lourde et dévastatrice.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/axes.png"
+  },
+  {
+    "Name": "Sword",
+    "Type": "Melee",
+    "Damage": 50,
+    "Weight": 3.0,
+    "Era": "Ancient",
+    "Country": "Europe",
+    "Description": "Épée longue à double tranchant, symbole de noblesse et de combat.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/sword.png"
+  },
+  {
+    "Name": "M16",
+    "Type": "Assault Rifle",
+    "Damage": 100,
+    "Weight": 6.0,
+    "Era": "Modern",
+    "Country": "USA",
+    "Description": "Fusil d'assaut américain standard depuis la guerre du Vietnam.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/m16.png"
+  },
+  {
+    "Name": "Katana",
+    "Type": "Melee",
+    "Damage": 70,
+    "Weight": 1.5,
+    "Era": "Feudal Japan",
+    "Country": "Japan",
+    "Description": "Sabre japonais emblématique des samouraïs. Lame incurvée d'une précision redoutable.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/katana.png"
+  },
+  {
+    "Name": "Desert Eagle",
+    "Type": "Pistol",
+    "Damage": 75,
+    "Weight": 2.0,
+    "Era": "Modern",
+    "Country": "USA",
+    "Description": "Pistolet semi-automatique très puissant. Connu pour sa taille imposante et son calibre .50 AE.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/desert_eagle.png"
+  },
+  {
+    "Name": "Longbow",
+    "Type": "Bow",
+    "Damage": 45,
+    "Weight": 2.5,
+    "Era": "Medieval",
+    "Country": "England",
+    "Description": "Arc long anglais utilisé lors de la Guerre de Cent Ans. Portée exceptionnelle.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/longbow.png"
+  },
+  {
+    "Name": "RPG-7",
+    "Type": "Rocket Launcher",
+    "Damage": 200,
+    "Weight": 7.0,
+    "Era": "Cold War",
+    "Country": "Russia",
+    "Description": "Lance-roquettes antichar soviétique très répandu.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/rpg7.png"
+  },
+  {
+    "Name": "Glock 17",
+    "Type": "Pistol",
+    "Damage": 55,
+    "Weight": 0.7,
+    "Era": "Modern",
+    "Country": "Austria",
+    "Description": "Pistolet semi-automatique léger et fiable. Très utilisé par les forces de l'ordre.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/glock17.png"
+  },
+  {
+    "Name": "Crossbow",
+    "Type": "Bow",
+    "Damage": 65,
+    "Weight": 3.5,
+    "Era": "Medieval",
+    "Country": "Europe",
+    "Description": "Arbalète médiévale puissante. Capable de percer les armures les plus résistantes.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/crossbow.png"
+  },
+  {
+    "Name": "Spear",
+    "Type": "Melee",
+    "Damage": 55,
+    "Weight": 2.0,
+    "Era": "Ancient",
+    "Country": "Greece",
+    "Description": "Lance grecque utilisée par les hoplites. Arme d'infanterie par excellence.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/spear.png"
+  },
+  {
+    "Name": "Sniper AWP",
+    "Type": "Sniper Rifle",
+    "Damage": 150,
+    "Weight": 6.5,
+    "Era": "Modern",
+    "Country": "UK",
+    "Description": "Fusil de précision britannique redoutable. Capable d'éliminer une cible à plus d'un kilomètre.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/sniper_awp.png"
+  },
+  {
+    "Name": "Flail",
+    "Type": "Melee",
+    "Damage": 65,
+    "Weight": 4.0,
+    "Era": "Medieval",
+    "Country": "Europe",
+    "Description": "Fléau d'armes médiéval composé d'une boule cloutée. Difficile à parer.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/flail.png"
+  },
+  {
+    "Name": "MP5",
+    "Type": "Submachine Gun",
+    "Damage": 60,
+    "Weight": 2.5,
+    "Era": "Modern",
+    "Country": "Germany",
+    "Description": "Pistolet-mitrailleur allemand très populaire. Utilisé par les forces spéciales.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/mp5.png"
+  },
+  {
+    "Name": "Gladius",
+    "Type": "Melee",
+    "Damage": 48,
+    "Weight": 1.2,
+    "Era": "Ancient",
+    "Country": "Rome",
+    "Description": "Épée courte des légionnaires romains. Parfaite pour le combat rapproché.",
+    "PictureUrl": "https://raw.githubusercontent.com/Salmansebai/WeaponCollection/main/gladius.png"
+  }
+]
