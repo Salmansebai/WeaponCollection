@@ -56,6 +56,10 @@ public partial class MainWindowViewModel : ViewModelBase
 
         foreach (var weapon in weapons)
             MyGlobals.MyWeapons.Add(weapon);
+
+        // Affiche le message de succès dans HomeViewModel
+        if (CurrentPage is HomeViewModel homeVm)
+            await homeVm.OnWeaponsLoaded();
     }
 
     partial void OnCurrentPageChanging(ViewModelBase? oldValue, ViewModelBase? newValue)
@@ -87,7 +91,6 @@ public partial class MainWindowViewModel : ViewModelBase
         CurrentPage = new CollectionDetailsViewModel(weaponId, GoToCollectionCommand, GoToEditFromCollectionCommand);
     }
 
-    // Edit depuis Home → Back revient vers Details de Home
     [RelayCommand]
     private void GoToEditFromHome(ObjectId weaponId)
     {
@@ -97,7 +100,6 @@ public partial class MainWindowViewModel : ViewModelBase
         }));
     }
 
-    // Edit depuis Collection → Back revient vers Details de Collection
     [RelayCommand]
     private void GoToEditFromCollection(ObjectId weaponId)
     {

@@ -100,3 +100,4 @@
 /home/salman/Téléchargements/WeaponCollection/obj/Debug/net9.0/WeaponCollection.pdb
 /home/salman/Téléchargements/WeaponCollection/obj/Debug/net9.0/WeaponCollection.genruntimeconfig.cache
 /home/salman/Téléchargements/WeaponCollection/obj/Debug/net9.0/ref/WeaponCollection.dll
+/home/salman/Téléchargements/WeaponCollection/obj/Debug/net9.0/WeaponCollection.sourcelink.json

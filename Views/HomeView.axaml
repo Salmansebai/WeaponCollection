@@ -8,206 +8,249 @@
              x:DataType="vm:HomeViewModel"
              x:Name="Home">
     
-           
     <Design.DataContext>
         <vm:HomeViewModel/>
     </Design.DataContext>
 
-    <ScrollViewer Background="#0f0f0f"
-                  VerticalScrollBarVisibility="Visible"
-                  HorizontalScrollBarVisibility="Disabled">
-        <StackPanel>
+    
+    <Grid>
+        <ScrollViewer Background="#0f0f0f"
+                      VerticalScrollBarVisibility="Visible"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel>
 
-            <!-- Hero section -->
-            <Border Background="#161616"
-                    Padding="60,50"
-                    BorderBrush="#2a2a2a"
-                    BorderThickness="0,0,0,1">
-                <StackPanel Spacing="16" HorizontalAlignment="Center">
+                <!-- Hero section -->
+                <Border Background="#161616"
+                        Padding="60,50"
+                        BorderBrush="#2a2a2a"
+                        BorderThickness="0,0,0,1">
+                    <StackPanel Spacing="16" HorizontalAlignment="Center">
 
-                    <TextBlock Text="⚔ Bienvenue à l'Armurerie"
-                               FontSize="36"
-                               FontWeight="Bold"
-                               Foreground="White"
-                               HorizontalAlignment="Center"/>
+                        <TextBlock Text="⚔ Bienvenue à l'Armurerie"
+                                   FontSize="36"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   HorizontalAlignment="Center"/>
 
-                    <TextBlock Text="Explorez, gérez et collectionnez les armes les plus légendaires de l'histoire"
-                               FontSize="16"
-                               Foreground="#666"
-                               HorizontalAlignment="Center"
-                               TextAlignment="Center"/>
-
-                    <!-- Barre de recherche -->
-                    <Border Background="#1a1a1a"
-                            CornerRadius="12"
-                            BorderBrush="#2a2a2a"
-                            BorderThickness="1"
-                            Margin="0,20,0,0"
-                            Width="500">
-                        <Grid ColumnDefinitions="Auto,*">
-                            <TextBlock Grid.Column="0"
-                                       Text="🔍"
-                                       FontSize="16"
-                                       Margin="16,0,8,0"
-                                       VerticalAlignment="Center"
-                                       Foreground="#555"/>
-                            <TextBox Grid.Column="1"
-                                     Text="{Binding SearchText}"
-                                     Watermark="Rechercher par nom, type, époque, pays..."
-                                     Background="Transparent"
-                                     Foreground="White"
-                                     CaretBrush="White"
-                                     BorderThickness="0"
-                                     Padding="8,14"
-                                     FontSize="14">
-                                <TextBox.Styles>
-                                    <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Style>
-                                </TextBox.Styles>
-                            </TextBox>
-                        </Grid>
-                    </Border>
-
-                    <!-- Boutons -->
-                    <StackPanel Orientation="Horizontal" Spacing="12" HorizontalAlignment="Center" Margin="0,10,0,0">
-
-                        <Button Command="{Binding LoadWeaponsCommand}">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Border Background="#1a1a1a"
-                                            CornerRadius="8"
-                                            Padding="24,12"
-                                            BorderBrush="#2a2a2a"
-                                            BorderThickness="1">
-                                        <TextBlock Text="⬇ Load JSON"
-                                                   Foreground="#aaa"
-                                                   FontWeight="Bold"
-                                                   FontSize="14"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Command="{Binding GoToCollectionCommand}">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Border Background="#c0392b"
-                                            CornerRadius="8"
-                                            Padding="24,12">
-                                        <TextBlock Text="Voir toute la collection →"
-                                                   Foreground="White"
-                                                   FontWeight="Bold"
-                                                   FontSize="14"/>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                    </StackPanel>
-
-                    <!-- Message si collection vide -->
-                    <Border Background="#1a1a1a"
-                            CornerRadius="10"
-                            Padding="16,10"
-                            Margin="0,10,0,0"
-                            IsVisible="{Binding IsCollectionEmpty}">
-                        <TextBlock Text="👆 Appuyez sur &quot;Load JSON&quot; pour charger votre collection"
+                        <TextBlock Text="Explorez, gérez et collectionnez les armes les plus légendaires de l'histoire"
+                                   FontSize="16"
                                    Foreground="#666"
-                                   FontSize="13"
                                    HorizontalAlignment="Center"
                                    TextAlignment="Center"/>
-                    </Border>
 
-                    <!-- Montant total -->
-                    <Border Background="#1a2a1a"
-                            CornerRadius="10"
-                            Padding="16,10"
-                            Margin="0,6,0,0"
-                            IsVisible="{Binding !IsCollectionEmpty}">
-                        <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center">
-                            <TextBlock Text="💰 Valeur totale de la collection :"
-                                       Foreground="#aaa"
-                                       FontSize="13"/>
-                            <TextBlock Text="{Binding TotalPrice, StringFormat='{}{0} €'}"
-                                       Foreground="#2ecc71"
-                                       FontSize="13"
-                                       FontWeight="Bold"/>
+                        <!-- Barre de recherche -->
+                        <Border Background="#1a1a1a"
+                                CornerRadius="12"
+                                BorderBrush="#2a2a2a"
+                                BorderThickness="1"
+                                Margin="0,20,0,0"
+                                Width="500">
+                            <Grid ColumnDefinitions="Auto,*">
+                                <TextBlock Grid.Column="0"
+                                           Text="🔍"
+                                           FontSize="16"
+                                           Margin="16,0,8,0"
+                                           VerticalAlignment="Center"
+                                           Foreground="#555"/>
+                                <TextBox Grid.Column="1"
+                                         Text="{Binding SearchText}"
+                                         Watermark="Rechercher par nom, type, époque, pays..."
+                                         Background="Transparent"
+                                         Foreground="White"
+                                         CaretBrush="White"
+                                         BorderThickness="0"
+                                         Padding="8,14"
+                                         FontSize="14">
+                                    <TextBox.Styles>
+                                        <Style Selector="TextBox:focus /template/ Border#PART_BorderElement">
+                                            <Setter Property="Background" Value="Transparent"/>
+                                        </Style>
+                                    </TextBox.Styles>
+                                </TextBox>
+                            </Grid>
+                        </Border>
+
+                        <!-- Boutons -->
+                        <StackPanel Orientation="Horizontal" Spacing="12" HorizontalAlignment="Center" Margin="0,10,0,0">
+
+                            <Button Command="{Binding LoadWeaponsCommand}">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Border Background="#1a1a1a"
+                                                CornerRadius="8"
+                                                Padding="24,12"
+                                                BorderBrush="#2a2a2a"
+                                                BorderThickness="1">
+                                            <TextBlock Text="⬇ Load JSON"
+                                                       Foreground="#aaa"
+                                                       FontWeight="Bold"
+                                                       FontSize="14"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                            <Button Command="{Binding GoToCollectionCommand}">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Border Background="#c0392b"
+                                                CornerRadius="8"
+                                                Padding="24,12">
+                                            <TextBlock Text="Voir toute la collection →"
+                                                       Foreground="White"
+                                                       FontWeight="Bold"
+                                                       FontSize="14"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
                         </StackPanel>
-                    </Border>
 
-                </StackPanel>
-            </Border>
+                        <!-- Message si collection vide -->
+                        <Border Background="#1a1a1a"
+                                CornerRadius="10"
+                                Padding="16,10"
+                                Margin="0,10,0,0"
+                                IsVisible="{Binding IsCollectionEmpty}">
+                            <TextBlock Text="👆 Appuyez sur &quot;Load JSON&quot; pour charger votre collection"
+                                       Foreground="#666"
+                                       FontSize="13"
+                                       HorizontalAlignment="Center"
+                                       TextAlignment="Center"/>
+                        </Border>
 
-            <!-- Stats -->
-            <Border Background="#0f0f0f"
-                    Padding="40,20"
-                    BorderBrush="#2a2a2a"
-                    BorderThickness="0,0,0,1">
-                <TextBlock Text="{Binding FilteredWeapons.Count, StringFormat='{}{0} armes trouvées'}"
-                           FontSize="13"
-                           Foreground="#666"
-                           HorizontalAlignment="Center"/>
-            </Border>
+                        <!-- Montant total -->
+                        <Border Background="#1a2a1a"
+                                CornerRadius="10"
+                                Padding="16,10"
+                                Margin="0,6,0,0"
+                                IsVisible="{Binding !IsCollectionEmpty}">
+                            <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center">
+                                <TextBlock Text="💰 Valeur totale de la collection :"
+                                           Foreground="#aaa"
+                                           FontSize="13"/>
+                                <TextBlock Text="{Binding TotalPrice, StringFormat='{}{0} €'}"
+                                           Foreground="#2ecc71"
+                                           FontSize="13"
+                                           FontWeight="Bold"/>
+                            </StackPanel>
+                        </Border>
 
-            <!-- Résultats -->
-            <ItemsControl ItemsSource="{Binding FilteredWeapons}" Margin="20">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel Orientation="Horizontal"/>
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
+                    </StackPanel>
+                </Border>
 
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <Button Command="{Binding DataContext.GoToDetailsCommand, ElementName=Home}"
-                                CommandParameter="{Binding Id}">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Border Width="270"
-                                            Height="120"
-                                            Margin="10"
-                                            CornerRadius="12"
-                                            Background="#1a1a1a"
-                                            BorderBrush="#2a2a2a"
-                                            BorderThickness="1">
-                                        <Grid ColumnDefinitions="Auto,*" Margin="12">
-                                            <Border Grid.Column="0"
-                                                    Background="#111"
-                                                    CornerRadius="8"
-                                                    Width="80"
-                                                    ClipToBounds="True">
-                                                <Image Source="{Binding Picture}"
-                                                       Stretch="Uniform"/>
-                                            </Border>
-                                            <StackPanel Grid.Column="1" Margin="12,0,0,0" Spacing="4" VerticalAlignment="Center">
-                                                <Border Background="#c0392b"
-                                                        CornerRadius="4"
-                                                        Padding="6,2"
-                                                        HorizontalAlignment="Left">
-                                                    <TextBlock Text="{Binding Type}"
-                                                               FontSize="9"
+                <!-- Stats -->
+                <Border Background="#0f0f0f"
+                        Padding="40,20"
+                        BorderBrush="#2a2a2a"
+                        BorderThickness="0,0,0,1">
+                    <TextBlock Text="{Binding FilteredWeapons.Count, StringFormat='{}{0} armes trouvées'}"
+                               FontSize="13"
+                               Foreground="#666"
+                               HorizontalAlignment="Center"/>
+                </Border>
+
+                <!-- Résultats -->
+                <ItemsControl ItemsSource="{Binding FilteredWeapons}" Margin="20">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding DataContext.GoToDetailsCommand, ElementName=Home}"
+                                    CommandParameter="{Binding Id}">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <Border Width="270"
+                                                Height="120"
+                                                Margin="10"
+                                                CornerRadius="12"
+                                                Background="#1a1a1a"
+                                                BorderBrush="#2a2a2a"
+                                                BorderThickness="1">
+                                            <Grid ColumnDefinitions="Auto,*" Margin="12">
+                                                <Border Grid.Column="0"
+                                                        Background="#111"
+                                                        CornerRadius="8"
+                                                        Width="80"
+                                                        ClipToBounds="True">
+                                                    <Image Source="{Binding Picture}"
+                                                           Stretch="Uniform"/>
+                                                </Border>
+                                                <StackPanel Grid.Column="1" Margin="12,0,0,0" Spacing="4" VerticalAlignment="Center">
+                                                    <Border Background="#c0392b"
+                                                            CornerRadius="4"
+                                                            Padding="6,2"
+                                                            HorizontalAlignment="Left">
+                                                        <TextBlock Text="{Binding Type}"
+                                                                   FontSize="9"
+                                                                   FontWeight="Bold"
+                                                                   Foreground="White"/>
+                                                    </Border>
+                                                    <TextBlock Text="{Binding Name}"
+                                                               FontSize="15"
                                                                FontWeight="Bold"
                                                                Foreground="White"/>
-                                                </Border>
-                                                <TextBlock Text="{Binding Name}"
-                                                           FontSize="15"
-                                                           FontWeight="Bold"
-                                                           Foreground="White"/>
-                                                <TextBlock Text="{Binding Era}"
-                                                           FontSize="11"
-                                                           Foreground="#666"/>
-                                            </StackPanel>
-                                        </Grid>
-                                    </Border>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
+                                                    <TextBlock Text="{Binding Era}"
+                                                               FontSize="11"
+                                                               Foreground="#666"/>
+                                                </StackPanel>
+                                            </Grid>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
 
-        </StackPanel>
-    </ScrollViewer>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Popup succès Load JSON -->
+        <Border IsVisible="{Binding ShowLoadSuccess}"
+                Background="#CC000000"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch">
+            <Border Background="#141414"
+                    CornerRadius="24"
+                    BorderBrush="#2a2a2a"
+                    BorderThickness="1"
+                    MaxWidth="380"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                <StackPanel>
+                    <Border Background="#1a3a1a"
+                            CornerRadius="24,24,0,0"
+                            Padding="32,28">
+                        <StackPanel Spacing="8" HorizontalAlignment="Center">
+                            <TextBlock Text="✅" FontSize="36" HorizontalAlignment="Center"/>
+                            <TextBlock Text="Collection chargée avec succès !"
+                                       FontSize="17" FontWeight="Bold"
+                                       Foreground="#2ecc71"
+                                       HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                    <StackPanel Margin="28,20,28,28" Spacing="12">
+                        <TextBlock Text="{Binding FilteredWeapons.Count, StringFormat='Votre collection de {0} armes a été chargée avec succès !'}"
+                                   FontSize="13"
+                                   Foreground="White"
+                                   TextAlignment="Center"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="Cette fenêtre se fermera automatiquement..."
+                                   FontSize="11"
+                                   Foreground="#555"
+                                   TextAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Border>
+
+    </Grid>
 
 </UserControl>
+

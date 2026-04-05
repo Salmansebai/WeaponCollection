@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MongoDB.Bson;
@@ -19,13 +20,14 @@ public partial class HomeViewModel : ViewModelBase
     [ObservableProperty]
     private ObservableCollection<Weapon> _filteredWeapons = new();
 
-    // Montant total de la collection
     [ObservableProperty]
     private double _totalPrice;
 
-    // Message pour l'utilisateur
     [ObservableProperty]
     private bool _isCollectionEmpty = true;
+
+    [ObservableProperty]
+    private bool _showLoadSuccess;
 
     public HomeViewModel(
         IRelayCommand goToCollectionCommand,
@@ -38,6 +40,14 @@ public partial class HomeViewModel : ViewModelBase
 
         MyGlobals.MyWeapons.CollectionChanged += (s, e) => FilterWeapons();
         FilterWeapons();
+    }
+
+    // Appelé depuis MainWindowViewModel après le chargement
+    public async Task OnWeaponsLoaded()
+    {
+        ShowLoadSuccess = true;
+        await Task.Delay(5000);
+        ShowLoadSuccess = false;
     }
 
     partial void OnSearchTextChanged(string? value)
@@ -60,10 +70,7 @@ public partial class HomeViewModel : ViewModelBase
         foreach (var weapon in results)
             FilteredWeapons.Add(weapon);
 
-        // Calcul du montant total
         TotalPrice = MyGlobals.MyWeapons.Sum(w => w.Price);
-
-        // Message si collection vide
         IsCollectionEmpty = MyGlobals.MyWeapons.Count == 0;
     }
 }
